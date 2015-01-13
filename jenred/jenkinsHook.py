@@ -5,7 +5,7 @@ __author__ = 'frank'
 
 from flask import request
 from jenred import app
-from jenred.util import jenkinsManager
+from jenred.util import jenkinsManager, redmineManager
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -16,7 +16,8 @@ def jenkins():
     url = request.form['url']
     job = jenkinsManager.getBuildData(url)
     app.logger.info(url)
-    #if job.get_status() != 'SUCCESS':
+    if job.get_status() != 'SUCCESS':
+        redmineManager.postBuildResult(job)
 
 
 

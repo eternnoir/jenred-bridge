@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+__author__ = 'frank'
+
+JENKINS_SERVER = ''
+JENKINS_USERNAME = ''
+JENKINS_PWD = ''
+REDMINE_SERVER = ''
+REDMINE_USERNAME = ''
+REDMINE_PWD = ''
+REDMINE_SUBJECT_PRE = '[Jenkins] '
+
+
+JENKINS_PROJECT_DIC={}
+JENKINS_PROJECT_DIC[''] = ''
