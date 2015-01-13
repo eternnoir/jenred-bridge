@@ -4,5 +4,6 @@ __version__ = '0.1'
 from flask import Flask
 app = Flask('jenred')
 
+from jenred.util import *
 from jenred import jenkinsHook
 
